@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch-30-py-ssm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch-30-py-ssm</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch-30-py-ssm-1.0.0.war">
+      <element id="artifact" artifact-name="ch-30-py-ssm:war exploded" />
+    </root>
+  </artifact>
+</component>

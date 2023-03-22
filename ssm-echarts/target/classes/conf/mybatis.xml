@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--settings：控制mybatis全局行为-->
+<!--    <settings>-->
+<!--        &lt;!&ndash;设置mybatis输出日志&ndash;&gt;-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+
+    <!--设置别名-->
+    <typeAliases>
+        <!--实体类所在包名(不是实体类的包名也可以)-->
+        <!-- <package> name包名  里面的类名就是别名-->
+        <package name="com.pslast.domain"/>
+    </typeAliases>
+
+
+    <!-- sql映射文件的位置-->
+    <mappers>
+        <!--指定多个mapper文件第二种方式 使用包名 这个包中的xml文件一次性都能加载给mybatis-->
+        <!--条件 1.mapper文件名称和接口名称一样 2.mapper文件和dao接口在同一目录-->
+        <package name="com.pslast.dao"/>
+    </mappers>
+
+
+</configuration>
+<!--
+mybatis的主配置文件:定义了数据库配置信息 sql映射文件的位置
+1.约束文件
+!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+mybatis-3-config.dtd:约束文件名称
+2.configuration:根标签。
+-->

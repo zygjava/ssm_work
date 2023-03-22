@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pslast.dao.UserDao">
+
+<select id="selectAll" resultType="com.pslast.domain.Userinfo">
+
+  select id, bookname,evaluate  from books limit #{nums}
+
+</select>
+
+<select id="selectconuts" resultType="java.lang.Integer">
+
+select count(*) from books
+
+</select>
+
+
+<select id="selectFive"  resultType="com.pslast.domain.Userinfo">
+  select id, bookname,evaluate from  books where id &gt;= #{num1} and id &lt;= #{num2}
+</select>
+
+
+</mapper>
